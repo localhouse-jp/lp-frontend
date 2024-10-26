@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://localhouse.jp
+
+# Sitemaps
+Sitemap: https://localhouse.jp/sitemap.xml
