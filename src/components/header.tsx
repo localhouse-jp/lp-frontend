@@ -1,0 +1,75 @@
+"use client";
+
+import {FC, ReactNode, useState} from 'react';
+import Link from "next/link";
+import Image from "next/image";
+import LogoImg from "#/assets/logo.png";
+
+export const Header: FC = () => {
+  return (
+    <header className={"h-[70px] px-2"}>
+      <DesktopHeader/>
+      <MobileHeader/>
+      <div className={"border-b-[1px] mx-4"}></div>
+    </header>
+  );
+}
+
+const MobileHeader: FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+  return (
+    <div className={"h-full flex flex-row justify-between lg:hidden"}>
+      <Link href={"/"} className={"grid place-items-center p-4"}>
+        <Image src={LogoImg.src} alt={""} width={LogoImg.width/1.5} height={LogoImg.height/1.5}/>
+      </Link>
+      <div className={"grid place-items-center"}>
+        <button onClick={toggle} className={"grid place-items-center p-4"}>
+          <svg className={"w-6 h-6"} viewBox="0 0 24 24">
+            <path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+          </svg>
+        </button>
+      </div>
+      <div className={`${isOpen ? "flex" : "hidden"} fixed top-[70px] w-full h-full left-0 bg-opacity-50 bg-black`} onClick={toggle}/>
+      <div
+        className={`${isOpen ? "flex" : "hidden"} flex-col w-full bg-background fixed top-[70px] left-0 z-10 border-t-[1px] border-b-[1px]`} onClick={toggle}>
+        <LinkItem href={"/"}>Home</LinkItem>
+        <LinkItem href={"/#why"}>Why</LinkItem>
+        <LinkItem href={"/#projects"}>Our Projects</LinkItem>
+        <LinkItem href={"/#sponsors"}>Sponsors</LinkItem>
+        <LinkItem href={"/#news"}>ニュース</LinkItem>
+        <LinkItem href={"/#contact"}>お問い合わせ</LinkItem>
+      </div>
+    </div>
+  );
+}
+
+const DesktopHeader: FC = () => {
+  return (
+    <div className={"h-full flex-row justify-between hidden lg:flex"}>
+      <div className={"flex flex-row align-middle flex-1"}>
+        <LinkItem href={"/"}>Home</LinkItem>
+        <LinkItem href={"/#why"}>Why</LinkItem>
+        <LinkItem href={"/#projects"}>Our Projects</LinkItem>
+        <LinkItem href={"/#sponsors"}>Sponsors</LinkItem>
+      </div>
+      <div className={"grid place-items-center"}>
+        <Link href={"/"}>
+          <Image src={LogoImg.src} alt={""} width={LogoImg.width} height={LogoImg.height}/>
+        </Link>
+      </div>
+      <div className={"flex flex-row align-middle flex-1 justify-end"}>
+        <LinkItem href={"/#news"}>ニュース</LinkItem>
+        <LinkItem href={"/#contact"}>お問い合わせ</LinkItem>
+      </div>
+    </div>
+  );
+}
+
+const LinkItem: FC<{href: string, children: ReactNode}> = ({href, children}) => {
+  return (
+    <Link href={href} className={"grid place-items-center p-4"}>
+      {children}
+    </Link>
+  )
+}
