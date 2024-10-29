@@ -1,9 +1,9 @@
 "use client";
 
-import {FC, ReactNode, useState} from 'react';
-import Link from "next/link";
+import LogoImg from "#/assets/logo.svg";
 import Image from "next/image";
-import LogoImg from "#/assets/logo.png";
+import Link from "next/link";
+import { FC, ReactNode, useState } from 'react';
 
 export const Header: FC = () => {
   return (
