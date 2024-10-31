@@ -2,7 +2,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
 
@@ -11,11 +11,11 @@ const inter = Inter({
   display: 'swap',
 })
 
-export const lineSeed = localFont({
-  src: "./fonts/LINESeedJP_OTF_Rg.woff2",
-  variable: "--font-line-seed",
-  weight: "100 900",
-});
+// export const lineSeed = localFont({
+//   src: "./fonts/LINESeedJP_OTF_Rg.woff2",
+//   variable: "--font-line-seed",
+//   weight: "100 900",
+// });
 // const geistMono = localFont({
 //   src: "./fonts/GeistMonoVF.woff",
 //   variable: "--font-geist-mono",
