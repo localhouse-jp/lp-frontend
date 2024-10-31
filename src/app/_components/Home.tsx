@@ -21,7 +21,7 @@ export default function Home() {
         </div>
 
 
-        <div className="flex flex-col text-right mt-28 ml-auto z-10">
+        <div className="flex flex-col text-right md:mt-28 mt-12 ml-auto z-10">
           <p className="font-bold">大阪府東大阪市</p>
           <p className="font-bold">HIGASHI-OSAKA, OSAKA</p>
           <Link href="https://localhouse.connpass.com" target="_blank"
