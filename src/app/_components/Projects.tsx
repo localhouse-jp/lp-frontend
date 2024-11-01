@@ -17,7 +17,7 @@ export default function Projects() {
     <div className="h-[80vh] mx-auto">
       <p className="text-xl text-center p-32">Projects</p>
 
-      <div className="flex">
+      <div className="flex flex-warp">
         {projects.map((project, index) => (
           <Item key={index} project={project} />
         ))}
