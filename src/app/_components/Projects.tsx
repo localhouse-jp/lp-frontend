@@ -14,10 +14,10 @@ export default function Projects() {
     })();
   }, [])
   return (
-    <div className="h-[80vh] mx-auto">
+    <div className="mb-64 mx-auto max-w-[1200px] justify-center">
       <p className="text-xl text-center p-32">Projects</p>
 
-      <div className="flex flex-warp">
+      <div className="flex flex-wrap mx-auto">
         {projects.map((project, index) => (
           <Item key={index} project={project} />
         ))}
@@ -37,13 +37,13 @@ function Item({ project }: { project: Project }) {
     })();
   }, [project.attachment])
 
-  return <Link className="flex flex-col flex-wrap gap-2 m-6 w-128 overflow-hidden" href={project.url} target="_blank">
-    <div className={`bg-gray-50 h-64 ${imageStatus === 'loading' && 'animate-pulse'}`}>
+  return <Link className="flex flex-col gap-2 md:m-6 mx-auto my-4 md:w-128 overflow-hidden" href={project.url} target="_blank">
+    <div className={`bg-gray-50 h-64 w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
       {imageStatus === 'loaded' &&
-        <Image src={image} alt={""} width={300} height={200} className="object-cover h-full" onError={() => {setImageStatus('error')}} />
+        <Image src={image} alt={""} width={300} height={200} className="object-cover h-full w-full" onError={() => { setImageStatus('error') }} />
       }
     </div>
-    <p className="font-bold text-xl w-128">{project.title}</p>
-    <p className="w-[300px]  text-ellipsis line-clamp-2 from-neutral-300">{project.description}</p>
+    <p className="font-bold text-xl w-full w-128 line-clamp-1">{project.title}</p>
+    <p className="w-[300px] text-ellipsis line-clamp-2 from-neutral-300">{project.description}</p>
   </Link>
 }
