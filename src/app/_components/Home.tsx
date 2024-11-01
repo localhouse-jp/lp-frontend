@@ -1,4 +1,4 @@
-
+'use client'
 import LOCALHOUSE_Background from "#/assets/LOCALHOUSE_Background.svg";
 import SuperTechEngineerHouse from "#/assets/SuperTechEngineerHouse.svg";
 import Sample01 from "#/assets/sample01.png";
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="">
       <div className="absolute z-0 m-12 overflow-hidden">
-      <Image src={LOCALHOUSE_Background.src} alt={""} width={512} height={16} className="sm:w-[70%] md:max-w-[820px] md:min-w-[320px] " />
+        <Image src={LOCALHOUSE_Background.src} alt={""} width={512} height={16} className="sm:w-[70%] md:max-w-[820px] md:min-w-[320px] " />
       </div>
       <div className="p-8 md:p-12 flex justify-between flex-wrap">
         <div className="flex flex-col md:gap-12 gap-4 mt-28 z-10">
