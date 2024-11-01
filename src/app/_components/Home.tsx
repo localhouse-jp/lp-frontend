@@ -2,11 +2,8 @@
 import LOCALHOUSE_Background from "#/assets/LOCALHOUSE_Background.svg";
 import SuperTechEngineerHouse from "#/assets/SuperTechEngineerHouse.svg";
 import Sample01 from "#/assets/sample01.png";
-
-
 import Image from 'next/image';
-import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
+import { LinkButton } from "./LinkButton";
 
 export default function Home() {
   return (
@@ -24,12 +21,7 @@ export default function Home() {
         <div className="flex flex-col text-right md:mt-28 mt-12 ml-auto z-10">
           <p className="font-bold">大阪府東大阪市</p>
           <p className="font-bold">HIGASHI-OSAKA, OSAKA</p>
-          <Link href="https://localhouse.connpass.com" target="_blank"
-            className="group mt-4 flex flex-row bg-black text-white font-bold p-2 rounded-full hover:bg-gray-800 transition-all duration-300"
-          >
-            <p className="my-auto ml-3 mr-6 text-sm">イベント情報を見る</p>
-            <IoIosArrowForward className="w-8 h-8 p-2 bg-white text-black rounded-full transform transition-transform duration-300 group-hover:-translate-x-2" />
-          </Link>
+          <LinkButton href="https://localhouse.connpass.com" title="イベント情報を見る" />
         </div>
       </div>
 
