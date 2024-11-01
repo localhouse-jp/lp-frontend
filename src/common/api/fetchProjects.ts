@@ -18,12 +18,14 @@ export async function fetchProjects(): Promise<Project[]> {
   });
   const data = await res.json();
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return data.map((project: any): Project => {
     const parser = new DOMParser();
     const descriptionDom = parser.parseFromString(project.content.rendered, "text/html");
     return {
       title: project.title.rendered,
       description: descriptionDom.querySelector("p")?.textContent || "",
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       attachment: project._links["wp:attachment"]?.map((link: any) => link.href) || [],
       url: project.link,
     }
