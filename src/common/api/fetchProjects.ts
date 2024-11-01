@@ -9,7 +9,8 @@ export type Project = {
 }
 
 export async function fetchProjects(): Promise<Project[]> {
-  const res = await fetch(process.env.NEXT_PUBLIC_WP_BASE_URL + "/?rest_route=/wp/v2/posts&categories=3", {
+  // &categories=3
+  const res = await fetch(process.env.NEXT_PUBLIC_WP_BASE_URL + "/?rest_route=/wp/v2/posts&per_page=3", {
     headers: {
       "Content-Type": "application/json",
       "CF-Access-Client-Id": process.env.NEXT_PUBLIC_CF_ACCESS_CLIENT_ID || '',
