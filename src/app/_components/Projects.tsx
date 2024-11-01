@@ -28,9 +28,9 @@ export default function Projects() {
         {projects.map((project, index) => (
           <Item key={index} project={project} />
         ))}
-        <Item project={{title: '[TEST] ながいながいながいながいながいながいながいながいながいながいながいテスト', description: 'ぽよよ〜ん', attachment: [],url: '' }} />
-        <Item project={{title: '[TEST] localhouse-jp/lp-frontend', description: 'Evil for said the of. She weak name radiant a bust and pallas is heart this floor and thy while. The censer weary stronger have still above. Here smiling lamplight. Peering desolate eagerly above disaster only the devil me not out as at while. For still entreating blessed swung sat now said then muttered till. Said and my the here my. The dreaming cried my repeating floor god front. Nightly floor whose whispered uncertain silence fact murmured living the. Beguiling sat the chamber. Off streaming leave. What of you. Door there whom door one there fancy morrow then ah above and flung enchanted i with.', attachment: [],url: '' }} />
-        <Item project={{title: 'プロジェクトテスト01', description: 'すごいプロジェクトです', attachment: [],url: '' }} />
+        <Item project={{ title: '[TEST] ながいながいながいながいながいながいながいながいながいながいながいテスト', description: 'ぽよよ〜ん', attachment: [], url: '' }} />
+        <Item project={{ title: '[TEST] localhouse-jp/lp-frontend', description: 'Evil for said the of. She weak name radiant a bust and pallas is heart this floor and thy while. The censer weary stronger have still above. Here smiling lamplight. Peering desolate eagerly above disaster only the devil me not out as at while. For still entreating blessed swung sat now said then muttered till. Said and my the here my. The dreaming cried my repeating floor god front. Nightly floor whose whispered uncertain silence fact murmured living the. Beguiling sat the chamber. Off streaming leave. What of you. Door there whom door one there fancy morrow then ah above and flung enchanted i with.', attachment: [], url: '' }} />
+        <Item project={{ title: 'プロジェクトテスト01', description: 'すごいプロジェクトです', attachment: [], url: '' }} />
       </div>
 
       <div className="flex justify-end md:mr-[120px] mr-4 my-8">
@@ -52,12 +52,14 @@ function Item({ project }: { project: Project }) {
   }, [project.attachment])
 
   return <Link className="flex flex-col gap-2  md:m-6 mx-auto my-4 md:w-[300px] w-full overflow-hidden transition duration-500 hover:opacity-80 hover:scale-[99%]" href={project.url} target="_blank">
-    <div className={`bg-gray-50 h-64 w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
+    <div className={`bg-gray-50 h-[200px] w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
       {imageStatus === 'loaded' &&
-        <Image src={image} alt={""} width={300} height={200} className="object-cover h-full w-full" onError={() => { setImageStatus('error') }} />
+        <Image src={image} alt={""} width={300} height={200} className="object-cover h-64 w-full" onError={() => { setImageStatus('error') }} />
       }
     </div>
     <p className="font-bold text-xl w-full line-clamp-1">{project.title}</p>
-    <p className="w-[300px] text-ellipsis line-clamp-2 from-neutral-300">{project.description}</p>
+    <p className="text-ellipsis line-clamp-2 w-full md:w-[300px] from-neutral-300">
+      {project.description}
+    </p>
   </Link>
 }

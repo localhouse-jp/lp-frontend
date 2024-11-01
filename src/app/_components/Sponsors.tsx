@@ -14,36 +14,45 @@ export default function Sponsors() {
       <div className="flex md:ml-32">
         <TitlePin title="Sponsors" />
       </div>
-      <p className="text-3xl px-4 py-4 font-bold md:ml-32">スポンサー様</p>
+      <p className="md:text-3xl text-xl px-4 py-4 font-bold md:ml-32">スポンサー様</p>
 
-      <div className="flex flex-warp gap-4 md:ml-[100px] m-6">
-        <Link href="https://tasuki-holdings.co.jp/" target="_blank" className="bg-slate-50 rounded-xl px-8 py-4">
+      <div className="flex flex-warp gap-4 md:mx-32 m-6">
+        <Link href="https://tasuki-holdings.co.jp/" target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">
           <p className="text-sm">協賛企業 2024年~</p>
           <p className="font-bold text-lg">株式会社タスキホールディングス様</p>
           <Image src={TasukiLogo.src} alt={""} width={512} height={16} className="sm:w-[70%] md:w-64 mx-auto" />
         </Link>
       </div>
 
-      <hr className="w-full md:ml-32  my-4 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+      <hr className="md:mx-32 my-4 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
 
-      <div className="flex flex-warp gap-4 md:ml-[100px] m-6" >
-        <Link href="" target="_blank" className="bg-slate-50 rounded-xl p-4">
+      <div className="flex flex-wrap gap-4 md:mx-32 m-6 md:justify-start justify-center" >
+        <Link href="https://hackbar.jp/" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">
           <p className="text-sm">フレンドシップスポンサー</p>
           <p className="font-bold text-lg">HACK.BAR様</p>
-          <Image src={HackbarLogo.src} alt={""} width={512} height={16} className="sm:w-[70%] md:w-64 mx-auto mix-blend-difference" />
+          <Image src={HackbarLogo.src} alt={""} width={512} height={16} className="w-64 mx-auto mix-blend-difference" />
+        </Link>
+
+        <Link href="https://starthype.co.jp" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">
+          <p className="text-sm">運営</p>
+          <p className="font-bold text-lg">スタートハイプ株式会社</p>
+          <p className="w-64 mx-auto text-sm">代表取締役 廣瀬悠人<br/>近畿大学情報学部在学中</p>
+
         </Link>
       </div>
 
-      <p className="font-bold md:mx-32 md:mt-16 mx-6">個人でご支援くださった皆様(敬称略・順不同)</p>
+      <p className="font-bold md:mx-32 md:mt-16 mx-6 md:text-base text-sm">個人でご支援くださった皆様(敬称略・順不同)</p>
       <div className="md:my-6 my-4 w-32 flex flex-warp gap-4 md:ml-32 mx-4">
         <PrivateSponsor name="ヒロッシー" href="https://twitter.com/hirossy" />
       </div>
 
       <div className="flex justify-center my-16">
-        <stripe-buy-button
-          buy-button-id="buy_btn_1QGDZdHbtyuxxlv7iRZAgeU9"
-          publishable-key="pk_live_51O91brHbtyuxxlv7n6U4YQcFJRo89C4D8uuK18MDOkBdV0eSVFyCFSiiDjcBH3dmagbdq5wTiLmu52rhcdFsCVmm00zPvn1uvZ"
-        />
+        <div className="transition duration-100 hover:opacity-80 hover:scale-[200%]">
+          <stripe-buy-button
+            buy-button-id="buy_btn_1QGDZdHbtyuxxlv7iRZAgeU9"
+            publishable-key="pk_live_51O91brHbtyuxxlv7n6U4YQcFJRo89C4D8uuK18MDOkBdV0eSVFyCFSiiDjcBH3dmagbdq5wTiLmu52rhcdFsCVmm00zPvn1uvZ"
+          />
+        </div>
       </div>
 
     </div>
@@ -52,6 +61,6 @@ export default function Sponsors() {
 
 function PrivateSponsor({ name, href }: { name: string, href: string }) {
   return (
-    <Link href={href} target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 font-bold my-auto text-nowrap">{name}</Link>
+    <Link href={href} target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</Link>
   );
 }
