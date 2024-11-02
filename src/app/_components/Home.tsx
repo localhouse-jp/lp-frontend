@@ -1,7 +1,7 @@
 'use client'
 import Sample01 from "#/assets/sample01.png";
 import Image from 'next/image';
-import { LinkButton } from "./LinkButton";
+import { LinkButton } from "@/components/LinkButton";
 import {BackgroundText} from "@/components/BackgroundText";
 import {ForegroundText} from "@/app/_components/ForegroundText";
 

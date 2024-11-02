@@ -4,7 +4,7 @@ import { fetchProjects, Project } from "@/common/api/fetchProjects";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { LinkButton } from "./LinkButton";
+import { LinkButton } from "@/components/LinkButton";
 import TitlePin from "./TitlePin";
 
 export default function Projects() {
