@@ -1,9 +1,10 @@
 "use client";
 
-import LogoImg from "#/assets/logo.svg";
+import LogoImg from "#/assets/VectorLogo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, ReactNode, useState } from 'react';
+import {Logo} from "@/assets/logo";
 
 export const Header: FC = () => {
   return (
@@ -20,8 +21,8 @@ const MobileHeader: FC = () => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div className={"h-full flex flex-row justify-between lg:hidden"}>
-      <Link href={"/"} className={"grid place-items-center p-4"}>
-        <Image src={LogoImg.src} alt={""} width={LogoImg.width / 1.5} height={LogoImg.height / 1.5} />
+      <Link href={"/"} className={"grid place-items-baseline p-4"}>
+        <Logo className={"fill-current h-full w-auto aspect-[183/59]"}/>
       </Link>
       <div className={"grid place-items-center"}>
         <button onClick={toggle} className={"grid place-items-center p-4"}>
@@ -55,7 +56,7 @@ const DesktopHeader: FC = () => {
       </div>
       <div className={"grid place-items-center"}>
         <Link href={"/"}>
-          <Image src={LogoImg.src} alt={""} width={LogoImg.width} height={LogoImg.height} />
+          <Logo className={"fill-current"}/>
         </Link>
       </div>
       <div className={"flex flex-row align-middle flex-1 justify-end"}>
