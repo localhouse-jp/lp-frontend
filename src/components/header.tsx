@@ -1,7 +1,5 @@
 "use client";
 
-import LogoImg from "#/assets/VectorLogo.svg";
-import Image from "next/image";
 import Link from "next/link";
 import { FC, ReactNode, useState } from 'react';
 import {Logo} from "@/assets/logo";
