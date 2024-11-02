@@ -1,13 +1,21 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
-import { Inter } from 'next/font/google';
+import { Inter, Open_Sans } from 'next/font/google';
 // import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
+import {ThemeProvider} from "@/components/ThemeProvider";
+import "@radix-ui/themes/styles.css";
 
 const inter = Inter({
   subsets: ['latin'],
+  display: 'swap',
+})
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-open-sans',
   display: 'swap',
 })
 
@@ -35,11 +43,13 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${inter.className} antialiased`}
+        className={`${inter.className} ${openSans.className} antialiased`}
       >
-        <Header/>
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Header/>
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
