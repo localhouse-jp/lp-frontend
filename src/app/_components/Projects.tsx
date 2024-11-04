@@ -12,7 +12,11 @@ export default function Projects() {
 
   useEffect(() => {
     (async () => {
-      setProjects(await fetchProjects())
+      try {
+        setProjects(await fetchProjects())
+      } catch (e) {
+        console.error(e);
+      }
     })();
   }, [])
   return (
@@ -22,7 +26,7 @@ export default function Projects() {
         <TitlePin title="Projects" />
       </div>
 
-      <p className="text-3xl px-4 py-4 font-bold md:ml-[100px]">プロジェクト</p>
+      <p className="text-2xl px-4 py-4 font-bold md:ml-[100px]">プロジェクト</p>
 
       <div className="flex flex-wrap md:mx-auto mx-4 justify-center">
         {projects.map((project, index) => (
@@ -45,14 +49,18 @@ function Item({ project }: { project: Project }) {
   const [imageStatus, setImageStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
   useEffect(() => {
     (async () => {
-      const image = await fetchAttachment(project.attachment?.[0])
-      setImage(image);
-      setImageStatus('loaded');
+      try {
+        const image = await fetchAttachment(project.attachment?.[0])
+        setImage(image);
+        setImageStatus('loaded');
+      } catch {
+        setImageStatus('error');
+      }
     })();
   }, [project.attachment])
 
-  return <Link className="flex flex-col gap-2  md:m-6 mx-auto my-4 md:w-[300px] w-full overflow-hidden transition duration-500 hover:opacity-80 hover:scale-[99%]" href={project.url} target="_blank">
-    <div className={`bg-gray-50 h-[200px] w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
+  return <Link className="flex flex-col gap-2  md:m-4 mx-auto my-4 md:w-[300px] w-full overflow-hidden transition duration-500 hover:opacity-80 hover:scale-[99%]" href={project.url} target="_blank">
+    <div className={`bg-slate-100 h-[200px] w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
       {imageStatus === 'loaded' &&
         <Image src={image} alt={""} width={300} height={200} className="object-cover h-64 w-full" onError={() => { setImageStatus('error') }} />
       }
