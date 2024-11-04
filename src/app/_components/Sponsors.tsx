@@ -6,7 +6,7 @@ import TitlePin from "./TitlePin";
 
 export default function Sponsors() {
   return (
-    <div className="h-[80vh] mx-auto max-w-[1200px] justify-center">
+    <div className="mx-auto max-w-[1200px] justify-center">
       <script async
         src="https://js.stripe.com/v3/buy-button.js">
       </script>
@@ -14,7 +14,7 @@ export default function Sponsors() {
       <div className="flex md:ml-32">
         <TitlePin title="Sponsors" />
       </div>
-      <p className="md:text-3xl text-xl px-4 py-4 font-bold md:ml-32">スポンサー様</p>
+      <p className="md:text-2xl text-xl p-4 font-bold md:ml-32">スポンサー様</p>
 
       <div className="flex flex-warp gap-4 md:mx-32 m-6">
         <Link href="https://tasuki-holdings.co.jp/" target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">
@@ -28,15 +28,15 @@ export default function Sponsors() {
 
       <div className="flex flex-wrap gap-4 md:mx-32 m-6 md:justify-start justify-center" >
         <Link href="https://hackbar.jp/" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">
-          <p className="text-sm">フレンドシップスポンサー</p>
-          <p className="font-bold text-lg">HACK.BAR様</p>
-          <Image src={HackbarLogo.src} alt={""} width={512} height={16} className="w-64 mx-auto mix-blend-difference" />
+          <p className="text-xs">フレンドシップスポンサー</p>
+          <p className="font-bold text-md">HACK.BAR様</p>
+          <Image src={HackbarLogo.src} alt={""} width={512} height={12} className="w-48 h-8 object-cover mx-auto mix-blend-difference" />
         </Link>
 
         <Link href="https://starthype.co.jp" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">
-          <p className="text-sm">運営</p>
-          <p className="font-bold text-lg">スタートハイプ株式会社</p>
-          <p className="w-64 mx-auto text-sm">代表取締役 廣瀬悠人<br/>近畿大学情報学部在学中</p>
+          <p className="text-xs">運営</p>
+          <p className="font-bold text-md">スタートハイプ株式会社</p>
+          <p className="w-48 mx-auto text-sm">代表取締役 廣瀬悠人<br/>近畿大学情報学部在学中</p>
 
         </Link>
       </div>
