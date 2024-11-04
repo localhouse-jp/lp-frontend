@@ -1,11 +1,9 @@
 "use client";
 
-import LogoImg from "#/assets/logo.svg";
 import AnchorLink from "@/app/_components/AnchorLink";
-import Image from "next/image";
+import { Logo } from "@/assets/logo";
 import Link from "next/link";
 import { FC, ReactNode, useState } from 'react';
-import {Logo} from "@/assets/logo";
 
 export const Header: FC = () => {
   return (
