@@ -1,4 +1,4 @@
-import TitlePin from "./TitlePin";
+import TitlePin from "@/app/_components/TitlePin";
 
 export default function Calendar() {
   return (
