@@ -1,5 +1,8 @@
 "use client";
 
+import LogoImg from "#/assets/logo.svg";
+import AnchorLink from "@/app/_components/AnchorLink";
+import Image from "next/image";
 import Link from "next/link";
 import { FC, ReactNode, useState } from 'react';
 import {Logo} from "@/assets/logo";
@@ -32,12 +35,13 @@ const MobileHeader: FC = () => {
       <div className={`${isOpen ? "flex" : "hidden"} fixed top-[70px] w-full h-full left-0 bg-opacity-50 bg-black z-20`} onClick={toggle} />
       <div
         className={`${isOpen ? "flex" : "hidden"} flex-col w-full bg-background fixed top-[70px] left-0 z-20 border-t-[1px] border-b-[1px]`} onClick={toggle}>
-        <LinkItem href={"/"}>Home</LinkItem>
-        <LinkItem href={"/#why"}>Why</LinkItem>
-        <LinkItem href={"/#projects"}>Our Projects</LinkItem>
-        <LinkItem href={"/#sponsors"}>Sponsors</LinkItem>
-        <LinkItem href={"/#news"}>ニュース</LinkItem>
-        <LinkItem href={"/#contact"}>お問い合わせ</LinkItem>
+        <LinkItem href={"#home"}>Home</LinkItem>
+        <LinkItem href={"#why"}>Why</LinkItem>
+        <LinkItem href={"#projects"}>Our Projects</LinkItem>
+        <LinkItem href={"#sponsors"}>Sponsors</LinkItem>
+        <LinkItem href={"#news"}>ニュース</LinkItem>
+        <LinkItem href={"#calendar"}>カレンダー</LinkItem>
+        <LinkItem href={"#contact"}>お問い合わせ</LinkItem>
       </div>
     </div>
   );
@@ -47,10 +51,10 @@ const DesktopHeader: FC = () => {
   return (
     <div className={"h-full flex-row justify-between hidden lg:flex"}>
       <div className={"flex flex-row align-middle flex-1"}>
-        <LinkItem href={"/"}>Home</LinkItem>
-        <LinkItem href={"/#why"}>Why</LinkItem>
-        <LinkItem href={"/#projects"}>Our Projects</LinkItem>
-        <LinkItem href={"/#sponsors"}>Sponsors</LinkItem>
+        <LinkItem href={"#home"}>Home</LinkItem>
+        <LinkItem href={"#why"}>Why</LinkItem>
+        <LinkItem href={"#projects"}>Our Projects</LinkItem>
+        <LinkItem href={"#sponsors"}>Sponsors</LinkItem>
       </div>
       <div className={"grid place-items-center"}>
         <Link href={"/"}>
@@ -58,8 +62,9 @@ const DesktopHeader: FC = () => {
         </Link>
       </div>
       <div className={"flex flex-row align-middle flex-1 justify-end"}>
-        <LinkItem href={"/#news"}>ニュース</LinkItem>
-        <LinkItem href={"/#contact"}>お問い合わせ</LinkItem>
+        <LinkItem href={"#calendar"}>カレンダー</LinkItem>
+        <LinkItem href={"#news"}>ニュース</LinkItem>
+        <LinkItem href={"#contact"}>お問い合わせ</LinkItem>
       </div>
     </div>
   );
@@ -67,8 +72,6 @@ const DesktopHeader: FC = () => {
 
 const LinkItem: FC<{ href: string, children: ReactNode }> = ({ href, children }) => {
   return (
-    <Link href={href} className={"grid place-items-center p-4"}>
-      {children}
-    </Link>
+    <AnchorLink href={href} className="grid place-items-center p-4 text-sm duration-500 hover:font-bold">{children}</AnchorLink>
   )
 }
