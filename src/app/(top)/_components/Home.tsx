@@ -2,8 +2,8 @@
 import LOCALHOUSE_Background from "#/assets/LOCALHOUSE_Background.svg";
 import SuperTechEngineerHouse from "#/assets/SuperTechEngineerHouse.svg";
 import Sample01 from "#/assets/sample01.png";
+import { LinkButton } from "@/app/_components/LinkButton";
 import Image from 'next/image';
-import { LinkButton } from "./LinkButton";
 
 export default function Home() {
   return (

@@ -1,8 +1,8 @@
 import HackbarLogo from "#/assets/Sponsor/hackbar.png";
 import TasukiLogo from "#/assets/Sponsor/tasuki.svg";
+import TitlePin from "@/app/_components/TitlePin";
 import Image from "next/image";
 import Link from "next/link";
-import TitlePin from "./TitlePin";
 
 export default function Sponsors() {
   return (

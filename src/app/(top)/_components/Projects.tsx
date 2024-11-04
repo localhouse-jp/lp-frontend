@@ -1,11 +1,11 @@
 'use client'
+import { LinkButton } from "@/app/_components/LinkButton";
+import TitlePin from "@/app/_components/TitlePin";
 import { fetchAttachment } from "@/common/api/fetchAttachment";
 import { fetchProjects, Project } from "@/common/api/fetchProjects";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { LinkButton } from "./LinkButton";
-import TitlePin from "./TitlePin";
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
