@@ -1,5 +1,6 @@
 import { inter } from "@/common/util/font";
 import { Footer } from "@/components/footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
+        <GoogleAnalytics />
         <Header />
         {children}
         <Footer />
