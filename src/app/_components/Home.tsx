@@ -7,7 +7,7 @@ import { LinkButton } from "./LinkButton";
 
 export default function Home() {
   return (
-    <div className="">
+    <div id="home">
       <div className="absolute w-full z-0 p-12 overflow-hidden">
         <Image src={LOCALHOUSE_Background.src} alt={""} width={512} height={16} className="sm:w-[70%] md:min-w-[800px] " />
       </div>

@@ -1,7 +1,7 @@
 
 export default function Why() {
   return (
-    <div className="w-full my-32 blue-gradient duration-500 hover:py-16">
+    <div className="w-full my-32 blue-gradient duration-500 hover:py-16" id="why">
       {/* <div className="w-full my-32 bg-gray-950 text-white duration-500 hover:py-1 hover:shadow-[inset_0px_25px_25px_rgba(0,0,0,0.5),_inset_0px_-25px_25px_rgba(0,0,0,0.5)]"> */}
       <div className="flex flex-col lg:flex-row  py-48 px-4 md:px-32 max-w-[1700px] md:mx-auto gap-12 justify-center">
         <p className="font-bold min-w-[240px] text-3xl my-auto text-center">なぜ始めるのか？</p>
