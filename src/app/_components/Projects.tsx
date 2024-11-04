@@ -20,7 +20,7 @@ export default function Projects() {
     })();
   }, [])
   return (
-    <div className="mb-64 mx-auto max-w-[1200px] justify-center">
+    <div className="md:mb-64 mb-32 mx-auto max-w-[1200px] justify-center">
 
       <div className="flex md:ml-[100px]">
         <TitlePin title="Projects" />
