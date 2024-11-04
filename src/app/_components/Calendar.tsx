@@ -2,7 +2,7 @@ import TitlePin from "./TitlePin";
 
 export default function Calendar() {
   return (
-    <div className="mx-auto max-w-[1200px] pt-1 pb-32 justify-center">
+    <div className="mx-auto max-w-[1200px] pt-1 pb-32 justify-center" id="calendar">
 
       <div className="mx-auto my-16 md:w-[80%] sm:w-[90%] md:h-[720px] h-[420px]">
         <div className="flex md:ml-4">

@@ -6,7 +6,7 @@ import TitlePin from "./TitlePin";
 
 export default function Sponsors() {
   return (
-    <div className="mx-auto max-w-[1200px] justify-center">
+    <div className="mx-auto max-w-[1200px] justify-center" id="sponsors">
       <script async
         src="https://js.stripe.com/v3/buy-button.js">
       </script>
