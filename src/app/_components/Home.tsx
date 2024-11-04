@@ -7,9 +7,9 @@ import { LinkButton } from "./LinkButton";
 
 export default function Home() {
   return (
-    <div className="">
-      <div className="absolute z-0 m-12 overflow-hidden">
-        <Image src={LOCALHOUSE_Background.src} alt={""} width={512} height={16} className="sm:w-[70%] md:max-w-[820px] md:min-w-[320px] " />
+    <div id="home">
+      <div className="absolute w-full z-0 p-12 overflow-hidden">
+        <Image src={LOCALHOUSE_Background.src} alt={""} width={512} height={16} className="sm:w-[70%] md:min-w-[800px] " />
       </div>
       <div className="p-8 md:p-12 flex justify-between flex-wrap">
         <div className="flex flex-col md:gap-12 gap-4 md:mt-28 mt-20 z-10">
