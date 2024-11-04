@@ -24,7 +24,7 @@ type ItemProps = {
 
 function Item(props: ItemProps) {
   return (
-    <div className="flex flex-wrap md:mx-32 gap-2">
+    <div className="flex flex-wrap md:mx-32 mx-2 gap-2">
       <a
         href={props.link}
         className="p-2 w-full duration-500 hover:opacity-80 hover:scale-[99%]"
