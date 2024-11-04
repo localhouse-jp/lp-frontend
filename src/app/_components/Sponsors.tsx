@@ -6,7 +6,7 @@ import TitlePin from "./TitlePin";
 
 export default function Sponsors() {
   return (
-    <div className="h-[80vh] mx-auto max-w-[1200px] justify-center">
+    <div className="mx-auto max-w-[1200px] justify-center" id="sponsors">
       <script async
         src="https://js.stripe.com/v3/buy-button.js">
       </script>
@@ -14,10 +14,10 @@ export default function Sponsors() {
       <div className="flex md:ml-32">
         <TitlePin title="Sponsors" />
       </div>
-      <p className="md:text-3xl text-xl px-4 py-4 font-bold md:ml-32">スポンサー様</p>
+      <p className="md:text-2xl text-xl p-4 font-bold md:ml-32">スポンサー</p>
 
       <div className="flex flex-warp gap-4 md:mx-32 m-6">
-        <Link href="https://tasuki-holdings.co.jp/" target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">
+        <Link href="https://tasuki-holdings.co.jp/" target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 duration-500 hover:scale-[110%] hover:shadow-lg">
           <p className="text-sm">協賛企業 2024年~</p>
           <p className="font-bold text-lg">株式会社タスキホールディングス様</p>
           <Image src={TasukiLogo.src} alt={""} width={512} height={16} className="sm:w-[70%] md:w-64 mx-auto" />
@@ -26,17 +26,17 @@ export default function Sponsors() {
 
       <hr className="md:mx-32 my-4 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
 
-      <div className="flex flex-wrap gap-4 md:mx-32 m-6 md:justify-start justify-center" >
-        <Link href="https://hackbar.jp/" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">
-          <p className="text-sm">フレンドシップスポンサー</p>
-          <p className="font-bold text-lg">HACK.BAR様</p>
-          <Image src={HackbarLogo.src} alt={""} width={512} height={16} className="w-64 mx-auto mix-blend-difference" />
+      <div className="flex flex-wrap md:gap-4 gap-2 md:mx-32 my-4 md:justify-start justify-center" >
+        <Link href="https://hackbar.jp/" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
+          <p className="text-xs">フレンドシップスポンサー</p>
+          <p className="font-bold text-md">HACK.BAR様</p>
+          <Image src={HackbarLogo.src} alt={""} width={512} height={12} className="w-36 h-8 object-cover mx-auto mix-blend-difference" />
         </Link>
 
-        <Link href="https://starthype.co.jp" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">
-          <p className="text-sm">運営</p>
-          <p className="font-bold text-lg">スタートハイプ株式会社</p>
-          <p className="w-64 mx-auto text-sm">代表取締役 廣瀬悠人<br/>近畿大学情報学部在学中</p>
+        <Link href="https://starthype.co.jp" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
+          <p className="text-xs">運営</p>
+          <p className="font-bold text-md">スタートハイプ株</p>
+          <p className="w-36 mx-auto text-xs">代表取締役 廣瀬悠人<br/>近畿大学情報学部在学中</p>
 
         </Link>
       </div>

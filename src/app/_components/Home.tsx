@@ -7,8 +7,8 @@ import {ForegroundText} from "@/app/_components/ForegroundText";
 
 export default function Home() {
   return (
-    <div className="">
-      <div className="absolute z-0 mx-4 lg:mx-10 overflow-hidden">
+    <div id="home">
+      <div className="absolute w-full z-0 p-12 overflow-hidden">
         <BackgroundText/>
       </div>
       <div className="p-8 lg:p-12 flex flex-col md:flex-row md:justify-between gap-8">
