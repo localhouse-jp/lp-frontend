@@ -11,5 +11,7 @@ export default async function GoogleAnalytics() {
               gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
           `}
     </Script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWK8KZ9P"
+      height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
   </>
 }
