@@ -32,9 +32,6 @@ export default function Projects() {
         {projects.map((project, index) => (
           <Item key={index} project={project} />
         ))}
-        <Item project={{ title: '[TEST] ながいながいながいながいながいながいながいながいながいながいながいテスト', description: 'ぽよよ〜ん', attachment: [], url: '' }} />
-        <Item project={{ title: '[TEST] localhouse-jp/lp-frontend', description: 'Evil for said the of. She weak name radiant a bust and pallas is heart this floor and thy while. The censer weary stronger have still above. Here smiling lamplight. Peering desolate eagerly above disaster only the devil me not out as at while. For still entreating blessed swung sat now said then muttered till. Said and my the here my. The dreaming cried my repeating floor god front. Nightly floor whose whispered uncertain silence fact murmured living the. Beguiling sat the chamber. Off streaming leave. What of you. Door there whom door one there fancy morrow then ah above and flung enchanted i with.', attachment: [], url: '' }} />
-        <Item project={{ title: 'プロジェクトテスト01', description: 'すごいプロジェクトです', attachment: [], url: '' }} />
       </div>
 
       <div className="flex justify-end md:mr-[120px] mr-4 my-8">
