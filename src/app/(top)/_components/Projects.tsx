@@ -20,7 +20,7 @@ export default function Projects() {
     })();
   }, [])
   return (
-    <div className="md:mb-64 mb-32 mx-auto max-w-[1200px] justify-center" id="projects">
+    <div className="md:mb-64 mb-32 mx-auto max-w-[1400px] justify-center" id="projects">
 
       <div className="flex md:ml-[100px]">
         <TitlePin title="Projects" />
@@ -56,13 +56,13 @@ function Item({ project }: { project: Project }) {
     })();
   }, [project.attachment])
 
-  return <Link className="flex flex-col gap-2  md:m-4 mx-auto my-4 md:w-[300px] w-full overflow-hidden transition duration-500 hover:opacity-80 hover:scale-[99%]" href={project.url} target="_blank">
-    <div className={`bg-slate-100 h-[200px] overflow-hidden w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
+  return <Link className="flex flex-col gap-1 md:m-4 mx-auto my-4 md:w-[375px] w-full overflow-hidden transition duration-500 hover:opacity-80 hover:scale-[99%]" href={project.url} target="_blank">
+    <div className={`bg-slate-100 aspect-video overflow-hidden w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
       {imageStatus === 'loaded' &&
-        <Image src={image} alt={""} width={300} height={200} className="object-cover h-64 w-full" onError={() => { setImageStatus('error') }} />
+        <Image src={image} alt={""} width={300} height={200} className="object-cover w-full aspect-video" onError={() => { setImageStatus('error') }} />
       }
     </div>
-    <p className="font-bold text-xl w-full line-clamp-1">{project.title}</p>
+    <p className="font-bold text-xl w-full line-clamp-1 mt-2">{project.title}</p>
     <p className="text-ellipsis line-clamp-2 w-full md:w-[300px] from-neutral-300">
       {project.description}
     </p>
