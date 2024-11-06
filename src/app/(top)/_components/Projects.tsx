@@ -35,7 +35,7 @@ export default function Projects() {
       </div>
 
       <div className="flex justify-end md:mr-[120px] mr-4 my-8">
-        <LinkButton href="http://blog.localhouse.jp/" title="もっと見る" />
+        <LinkButton href="https://blog.localhouse.jp/category/projects/" title="もっと見る" />
       </div>
     </div>
   );

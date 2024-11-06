@@ -1,4 +1,5 @@
 'use client'
+import { LinkButton } from "@/app/_components/LinkButton";
 import TitlePin from "@/app/_components/TitlePin";
 import { fetchNews, News as NewsType } from "@/common/api/fetchNews";
 import { useEffect, useState } from "react";
@@ -25,6 +26,9 @@ export default function News() {
       {news.map((news, index) => (
         <Item key={index} title={news.title} description={news.description} date={news.date} link={news.url} />
       ))}
+      <div className="flex justify-end md:mr-[120px] mr-4 my-8">
+        <LinkButton href="https://blog.localhouse.jp/category/news/" title="もっと見る" />
+      </div>
     </div>
   );
 }
