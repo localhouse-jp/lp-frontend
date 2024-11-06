@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Sponsors() {
   return (
-    <div className="mx-auto max-w-[1200px] justify-center" id="sponsors">
+    <div className="mx-auto max-w-[1400px] justify-center" id="sponsors">
       <script async
         src="https://js.stripe.com/v3/buy-button.js">
       </script>

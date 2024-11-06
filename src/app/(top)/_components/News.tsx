@@ -16,7 +16,7 @@ export default function News() {
   }, [])
 
   return (
-    <div className="md:my-64 my-32 mx-auto max-w-[1200px] justify-center" id="news">
+    <div className="md:my-64 my-32 mx-auto max-w-[1400px] justify-center" id="news">
 
       <div className="flex md:ml-32">
         <TitlePin title="News" />
