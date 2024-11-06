@@ -35,7 +35,7 @@ export default function Projects() {
       </div>
 
       <div className="flex justify-end md:mr-[120px] mr-4 my-8">
-        <LinkButton href="/projects" title="もっと見る" />
+        <LinkButton href="http://blog.localhouse.jp/" title="もっと見る" />
       </div>
     </div>
   );
@@ -57,7 +57,7 @@ function Item({ project }: { project: Project }) {
   }, [project.attachment])
 
   return <Link className="flex flex-col gap-2  md:m-4 mx-auto my-4 md:w-[300px] w-full overflow-hidden transition duration-500 hover:opacity-80 hover:scale-[99%]" href={project.url} target="_blank">
-    <div className={`bg-slate-100 h-[200px] w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
+    <div className={`bg-slate-100 h-[200px] overflow-hidden w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
       {imageStatus === 'loaded' &&
         <Image src={image} alt={""} width={300} height={200} className="object-cover h-64 w-full" onError={() => { setImageStatus('error') }} />
       }
