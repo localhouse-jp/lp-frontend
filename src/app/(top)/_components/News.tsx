@@ -1,5 +1,5 @@
 'use client'
-import { LinkButton } from "@/app/_components/LinkButton";
+import { LinkButton } from "@/components/LinkButton";
 import TitlePin from "@/app/_components/TitlePin";
 import { fetchNews, News as NewsType } from "@/common/api/fetchNews";
 import { useEffect, useState } from "react";
