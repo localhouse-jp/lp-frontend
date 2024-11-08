@@ -1,5 +1,5 @@
 'use client'
-import { LinkButton } from "@/app/_components/LinkButton";
+import { LinkButton } from "@/components/LinkButton";
 import TitlePin from "@/app/_components/TitlePin";
 import { fetchAttachment } from "@/common/api/fetchAttachment";
 import { fetchProjects, Project } from "@/common/api/fetchProjects";
