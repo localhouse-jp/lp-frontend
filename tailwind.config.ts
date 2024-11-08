@@ -36,7 +36,8 @@ const config: Config = {
         "gray-9": "var(--gray-9)",
         "gray-10": "var(--gray-10)",
         "gray-11": "var(--gray-11)",
-        "gray-12": "var(--gray-12)"
+        "gray-12": "var(--gray-12)",
+        "grass-11": "var(--grass-11)",
       }
     },
   },

@@ -12,8 +12,10 @@ export default function Root() {
       <Home />
       <ImageView />
       <Why />
-      <Projects />
-      <Sponsors />
+      <div className={"px-4 md:px-32 mx-auto max-w-[1400px] justify-center py-16 flex flex-col gap-8"}>
+        <Projects />
+        <Sponsors />
+      </div>
       <News />
       <Calendar />
     </>
