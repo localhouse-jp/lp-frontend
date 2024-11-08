@@ -20,13 +20,13 @@ export default function Projects() {
     })();
   }, [])
   return (
-    <div className="md:mb-64 mb-32 mx-auto max-w-[1400px] justify-center" id="projects">
+    <div className="px-4 md:px-16 py-16 mx-auto max-w-[1400px] justify-center" id="projects">
 
-      <div className="flex md:ml-[100px]">
+      <div className="flex">
         <TitlePin title="Projects" />
       </div>
 
-      <p className="text-2xl px-4 py-4 font-bold md:ml-[100px]">プロジェクト</p>
+      <p className="text-2xl py-4 font-bold">プロジェクト</p>
 
       <div className="flex flex-wrap md:mx-auto mx-4 justify-center">
         {projects.map((project, index) => (
@@ -34,7 +34,7 @@ export default function Projects() {
         ))}
       </div>
 
-      <div className="flex justify-end md:mr-[120px] mr-4 my-8">
+      <div className="flex justify-end">
         <LinkButton href="https://blog.localhouse.jp/category/projects/" title="もっと見る" />
       </div>
     </div>
