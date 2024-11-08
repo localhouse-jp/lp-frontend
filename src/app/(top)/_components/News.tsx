@@ -17,16 +17,18 @@ export default function News() {
   }, [])
 
   return (
-    <div className="md:my-64 my-32 mx-auto max-w-[1400px] justify-center" id="news">
+    <div className="flex flex-col gap-4" id="news">
 
-      <div className="flex md:ml-32">
+      <div className="flex">
         <TitlePin title="News" />
       </div>
-      <p className="md:text-2xl text-xl px-4 py-4 font-bold md:ml-32">ニュース</p>
-      {news.map((news, index) => (
-        <Item key={index} title={news.title} description={news.description} date={news.date} link={news.url} />
-      ))}
-      <div className="flex justify-end md:mr-[120px] mr-4 my-8">
+      <p className="md:text-2xl text-xl font-bold">ニュース</p>
+      <div className={"flex flex-col"}>
+        {news.map((news, index) => (
+          <Item key={index} title={news.title} description={news.description} date={news.date} link={news.url} />
+        ))}
+      </div>
+      <div className="flex justify-end">
         <LinkButton href="https://blog.localhouse.jp/category/news/" title="もっと見る" />
       </div>
     </div>
@@ -42,7 +44,7 @@ type ItemProps = {
 
 function Item(props: ItemProps) {
   return (
-    <div className="flex flex-wrap md:mx-32 mx-2 gap-2">
+    <div className="flex flex-wrap gap-2 last:border-b-1 border-neutral-100">
       <a
         href={props.link}
         className="p-2 w-full duration-500 hover:opacity-80 hover:scale-[99%]"
@@ -52,7 +54,6 @@ function Item(props: ItemProps) {
         <p className="font-bold text-md">{props.title}</p>
         <p className="text-sm text-neutral-800">{props.description}</p>
       </a>
-      <hr className="h-0.5 w-full bg-neutral-100 border-t-0" />
     </div>
   );
 }
