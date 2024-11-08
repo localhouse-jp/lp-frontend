@@ -1,7 +1,7 @@
-import HackbarLogo from "#/assets/Sponsor/hackbar.png";
-import TasukiLogo from "#/assets/Sponsor/tasuki.svg";
+// import HackbarLogo from "#/assets/Sponsor/hackbar.png";
+// import TasukiLogo from "#/assets/Sponsor/tasuki.svg";
 import TitlePin from "@/app/_components/TitlePin";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 export default function Sponsors() {
@@ -17,21 +17,21 @@ export default function Sponsors() {
       <p className="md:text-2xl text-xl p-4 font-bold md:ml-32">スポンサー</p>
 
       <div className="flex flex-warp gap-4 md:mx-32 m-6">
-        <Link href="https://tasuki-holdings.co.jp/" target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 duration-500 hover:scale-[110%] hover:shadow-lg">
+        {/* <Link href="https://tasuki-holdings.co.jp/" target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 duration-500 hover:scale-[110%] hover:shadow-lg">
           <p className="text-sm">協賛企業 2024年~</p>
           <p className="font-bold text-lg">株式会社タスキホールディングス様</p>
           <Image src={TasukiLogo.src} alt={""} width={512} height={16} className="sm:w-[70%] md:w-64 mx-auto" />
-        </Link>
+        </Link> */}
       </div>
 
       <hr className="md:mx-32 my-4 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
 
       <div className="flex flex-wrap md:gap-4 gap-2 md:mx-32 my-4 md:justify-start justify-center" >
-        <Link href="https://hackbar.jp/" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
+        {/* <Link href="https://hackbar.jp/" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
           <p className="text-xs">フレンドシップスポンサー</p>
           <p className="font-bold text-md">HACK.BAR様</p>
           <Image src={HackbarLogo.src} alt={""} width={512} height={12} className="w-36 md:w-44 h-8 object-cover mx-auto mix-blend-difference" />
-        </Link>
+        </Link> */}
 
         <Link href="https://starthype.co.jp" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
           <p className="text-xs">運営</p>
