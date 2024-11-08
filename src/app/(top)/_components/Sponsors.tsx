@@ -1,12 +1,12 @@
 import HackbarLogo from "#/assets/Sponsor/hackbar.png";
 import TasukiLogo from "#/assets/Sponsor/tasuki.svg";
+import TitlePin from "@/app/_components/TitlePin";
 import Image from "next/image";
 import Link from "next/link";
-import TitlePin from "./TitlePin";
 
 export default function Sponsors() {
   return (
-    <div className="mx-auto max-w-[1200px] justify-center" id="sponsors">
+    <div className="mx-auto max-w-[1400px] justify-center" id="sponsors">
       <script async
         src="https://js.stripe.com/v3/buy-button.js">
       </script>
@@ -30,13 +30,13 @@ export default function Sponsors() {
         <Link href="https://hackbar.jp/" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
           <p className="text-xs">フレンドシップスポンサー</p>
           <p className="font-bold text-md">HACK.BAR様</p>
-          <Image src={HackbarLogo.src} alt={""} width={512} height={12} className="w-36 h-8 object-cover mx-auto mix-blend-difference" />
+          <Image src={HackbarLogo.src} alt={""} width={512} height={12} className="w-36 md:w-44 h-8 object-cover mx-auto mix-blend-difference" />
         </Link>
 
         <Link href="https://starthype.co.jp" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
           <p className="text-xs">運営</p>
-          <p className="font-bold text-md">スタートハイプ株</p>
-          <p className="w-36 mx-auto text-xs">代表取締役 廣瀬悠人<br/>近畿大学情報学部在学中</p>
+          <p className="font-bold text-md">STARTHYPE, Inc.</p>
+          <p className="w-36 md:w-44 mx-auto text-xs">代表取締役 廣瀬悠人<br/>近畿大学情報学部在学中</p>
 
         </Link>
       </div>
