@@ -7,6 +7,8 @@ import Head from "next/head";
 import Script from "next/script";
 import { ReactNode } from "react";
 import "./globals.css";
+import {ThemeProvider} from "@/components/ThemeProvider";
+import "@radix-ui/themes/styles.css";
 
 export const metadata: Metadata = {
   title: "LOCALHOUSE ローカルハウス | IT系学生コミュニティ",
@@ -63,10 +65,12 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       <body
         className={`${inter.className} antialiased`}
       >
-        <GoogleAnalytics />
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <GoogleAnalytics />
+          <Header/>
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
