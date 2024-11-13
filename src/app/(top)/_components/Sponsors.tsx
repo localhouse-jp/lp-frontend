@@ -36,7 +36,7 @@ export default function Sponsors() {
         <Link href="https://starthype.co.jp" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
           <p className="text-xs">運営</p>
           <p className="font-bold text-md">STARTHYPE, Inc.</p>
-          <p className="w-36 md:w-44 mx-auto text-xs">代表取締役 廣瀬悠人<br/>近畿大学情報学部在学中</p>
+          <p className="w-36 md:w-44 mx-auto text-xs">代表取締役 廣瀬悠人<br />近畿大学情報学部在学中</p>
 
         </Link>
       </div>
@@ -44,6 +44,7 @@ export default function Sponsors() {
       <p className="font-bold md:mx-32 md:mt-16 mx-6 md:text-base text-sm">個人でご支援くださった皆様(敬称略・順不同)</p>
       <div className="md:my-6 my-4 w-32 flex flex-warp gap-4 md:ml-32 mx-4">
         <PrivateSponsor name="ひろせファーム" href="http://hirose-f.com" />
+        <PrivateSponsor name="加藤 翔" href="" />
         {/* <PrivateSponsor name="ヒロッシー" href="https://twitter.com/hirossy" /> */}
       </div>
 
@@ -61,7 +62,6 @@ export default function Sponsors() {
 }
 
 function PrivateSponsor({ name, href }: { name: string, href: string }) {
-  return (
-    <Link href={href} target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</Link>
-  );
+  return href ? <Link href={href} target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</Link>
+    : <p className="bg-slate-50 rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</p>
 }
