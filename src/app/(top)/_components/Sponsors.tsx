@@ -43,9 +43,9 @@ export default function Sponsors() {
 
       <p className="font-bold md:mx-32 md:mt-16 mx-6 md:text-base text-sm">個人でご支援くださった皆様(敬称略・順不同)</p>
       <div className="md:my-6 my-4 w-32 flex flex-warp gap-4 md:ml-32 mx-4">
+        <PrivateSponsor name="HIROSSY" href="" />
         <PrivateSponsor name="ひろせファーム" href="http://hirose-f.com" />
         <PrivateSponsor name="加藤 翔" href="" />
-        {/* <PrivateSponsor name="ヒロッシー" href="https://twitter.com/hirossy" /> */}
       </div>
 
       <div className="flex justify-center my-16">
