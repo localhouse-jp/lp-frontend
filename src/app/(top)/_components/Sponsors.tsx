@@ -33,7 +33,7 @@ export default function Sponsors() {
           <Image src={HackbarLogo.src} alt={""} width={512} height={12} className="w-36 md:w-44 h-8 object-cover mx-auto mix-blend-difference" />
         </Link> */}
 
-        <Link href="https://starthype.co.jp" target="_blank" className="bg-slate-50 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
+        <Link href="https://starthype.co.jp" target="_blank" className="bg-slate-50 dark:bg-slate-800 rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
           <p className="text-xs">運営</p>
           <p className="font-bold text-md">STARTHYPE, Inc.</p>
           <p className="w-36 md:w-44 mx-auto text-xs">代表取締役 廣瀬悠人<br />近畿大学情報学部在学中</p>
@@ -62,6 +62,6 @@ export default function Sponsors() {
 }
 
 function PrivateSponsor({ name, href }: { name: string, href: string }) {
-  return href ? <Link href={href} target="_blank" className="bg-slate-50 rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</Link>
-    : <p className="bg-slate-50 rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</p>
+  return href ? <Link href={href} target="_blank" className="bg-slate-50 dark:bg-slate-800 rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</Link>
+    : <p className="bg-slate-50 dark:bg-slate-800 rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</p>
 }

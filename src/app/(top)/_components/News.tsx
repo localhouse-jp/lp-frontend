@@ -1,7 +1,7 @@
 'use client'
-import { LinkButton } from "@/components/LinkButton";
 import TitlePin from "@/app/_components/TitlePin";
 import { fetchNews, News as NewsType } from "@/common/api/fetchNews";
+import { LinkButton } from "@/components/LinkButton";
 import { useEffect, useState } from "react";
 
 export default function News() {
@@ -52,7 +52,7 @@ function Item(props: ItemProps) {
         <p className="font-bold text-md">{props.title}</p>
         <p className="text-sm text-neutral-800">{props.description}</p>
       </a>
-      <hr className="h-0.5 w-full bg-neutral-100 border-t-0" />
+      <hr className="h-0.5 w-full bg-neutral-100 border-t-0 dark:bg-white/10" />
     </div>
   );
 }
