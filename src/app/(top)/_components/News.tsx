@@ -1,7 +1,7 @@
 'use client'
-import { LinkButton } from "@/components/LinkButton";
 import TitlePin from "@/app/_components/TitlePin";
 import { fetchNews, News as NewsType } from "@/common/api/fetchNews";
+import { LinkButton } from "@/components/LinkButton";
 import { useEffect, useState } from "react";
 
 export default function News() {
