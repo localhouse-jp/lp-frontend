@@ -26,7 +26,7 @@ body {
   100% { background-position: 0% 50%; }
 }
 .blue-gradient {
-  background: linear-gradient(90deg, #e0f7fa, #e3f2fd, #bbdefb);
-  background-size: 400% 400%;
-  animation: subtleBlueGradient 60s ease infinite;
+  background: linear-gradient(90deg, #e0f7fa, #99EDC4, #bbdefb, #E599ED);
+  background-size: 200% 200%;
+  animation: subtleBlueGradient 20s ease infinite;
 }
