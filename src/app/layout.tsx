@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { GoogleTagManager } from '@next/third-parties/google';
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import Head from "next/head";
@@ -66,6 +67,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         className={`${inter.className} antialiased`}
       >
         <ThemeProvider>
+          <GoogleTagManager gtmId={"GTM-PWK8KZ9P"} />
           <GoogleAnalytics />
           <Header/>
           {children}
