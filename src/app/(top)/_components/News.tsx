@@ -17,7 +17,7 @@ export default function News() {
   }, [])
 
   return (
-    <div className="flex flex-col gap-4" id="news">
+    <div className="flex flex-col gap-4 my-16" id="news">
 
       <div className="flex">
         <TitlePin title="News" />
@@ -27,6 +27,7 @@ export default function News() {
         {news.map((news, index) => (
           <Item key={index} title={news.title} description={news.description} date={news.date} link={news.url} />
         ))}
+        {news.length === 0 && <p className="text-gray-600 mx-auto my-16">準備中...</p>}
       </div>
       <div className="flex justify-end">
         <LinkButton href="https://blog.localhouse.jp/category/news/" title="もっと見る" />
