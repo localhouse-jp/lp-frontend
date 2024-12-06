@@ -1,8 +1,8 @@
 'use client'
-import { LinkButton } from "@/components/LinkButton";
 import TitlePin from "@/app/_components/TitlePin";
 import { fetchAttachment } from "@/common/api/fetchAttachment";
 import { fetchProjects, Project } from "@/common/api/fetchProjects";
+import { LinkButton } from "@/components/LinkButton";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -20,21 +20,22 @@ export default function Projects() {
     })();
   }, [])
   return (
-    <div className="md:mb-64 mb-32 mx-auto max-w-[1400px] justify-center" id="projects">
+    <div className="my-16" id="projects">
 
-      <div className="flex md:ml-[100px]">
+      <div className="flex">
         <TitlePin title="Projects" />
       </div>
 
-      <p className="text-2xl px-4 py-4 font-bold md:ml-[100px]">プロジェクト</p>
+      <p className="text-2xl py-4 font-bold">プロジェクト</p>
 
-      <div className="flex flex-wrap md:mx-auto mx-4 justify-center">
+      <div className="flex flex-wrap md:mx-auto my-8 justify-center">
         {projects.map((project, index) => (
           <Item key={index} project={project} />
         ))}
+        {projects.length === 0 && <p className="text-gray-600 my-16">準備中...</p>}
       </div>
 
-      <div className="flex justify-end md:mr-[120px] mr-4 my-8">
+      <div className="flex justify-end">
         <LinkButton href="https://blog.localhouse.jp/category/projects/" title="もっと見る" />
       </div>
     </div>
@@ -56,7 +57,7 @@ function Item({ project }: { project: Project }) {
     })();
   }, [project.attachment])
 
-  return <Link className="flex flex-col gap-1 md:m-4 mx-auto my-4 md:w-[375px] w-full overflow-hidden transition duration-500 hover:opacity-80 hover:scale-[99%]" href={project.url} target="_blank">
+  return <Link className="flex flex-col gap-1 md:m-4 mx-auto my-4 md:w-[328px] w-full overflow-hidden transition duration-500 hover:opacity-80 hover:scale-[99%]" href={project.url} target="_blank">
     <div className={`bg-slate-100 aspect-video overflow-hidden w-full ${imageStatus === 'loading' && 'animate-pulse'}`}>
       {imageStatus === 'loaded' &&
         <Image src={image} alt={""} width={300} height={200} className="object-cover w-full aspect-video" onError={() => { setImageStatus('error') }} />
