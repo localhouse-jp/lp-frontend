@@ -1,9 +1,9 @@
 'use client'
 import Sample01 from "#/assets/sample01.png";
-import Image from 'next/image';
+import { ForegroundText } from "@/app/_components/ForegroundText";
+import { BackgroundText } from "@/components/BackgroundText";
 import { LinkButton } from "@/components/LinkButton";
-import {BackgroundText} from "@/components/BackgroundText";
-import {ForegroundText} from "@/app/_components/ForegroundText";
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -19,8 +19,8 @@ export default function Home() {
 
 
         <div className="flex flex-col text-right z-10 md:justify-center items-end flex-shrink-0">
-          <p className="font-bold">大阪府東大阪市</p>
-          <p className="font-bold">HIGASHI-OSAKA, OSAKA</p>
+          <p className="font-bold">大阪府東大阪市中小阪3-10-13</p>
+          <p className="font-bold">3-10-13 NAKAKOSAKA HIGASHI-OSAKA, OSAKA</p>
           <LinkButton href="https://localhouse.connpass.com" title="イベント情報を見る" />
         </div>
       </div>

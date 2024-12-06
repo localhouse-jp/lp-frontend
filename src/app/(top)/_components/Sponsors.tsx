@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Sponsors() {
   return (
-    <div className="flex flex-col gap-8" id="sponsors">
+    <div className="flex flex-col gap-8 my-16" id="sponsors">
       <div className="flex">
         <TitlePin title="Sponsors"/>
       </div>
@@ -52,9 +52,9 @@ export default function Sponsors() {
         </div>
 
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center my-6">
         <Link href={"https://donate.stripe.com/aEU2cdayq8194RqeUU"}
-              className="transition duration-100 hover:opacity-80 bg-grass-11 text-black px-8 py-2 rounded grid place-items-center">
+              className="transition duration-100 hover:scale-95 bg-lime-400 text-black px-32 py-4 font-bold md:w-auto w-full rounded-md grid place-items-center">
           応援できるボタン ☕
         </Link>
       </div>

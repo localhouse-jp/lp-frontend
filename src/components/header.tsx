@@ -39,7 +39,7 @@ const MobileHeader: FC = () => {
         <LinkItem href={"#sponsors"}>Sponsors</LinkItem>
         <LinkItem href={"#news"}>ニュース</LinkItem>
         <LinkItem href={"#calendar"}>カレンダー</LinkItem>
-        <LinkItem href={"#contact"}>お問い合わせ</LinkItem>
+        <Link className="grid place-items-center p-4 text-sm duration-500 hover:font-bold" href={"https://suite.starthype.co.jp/apps/forms/s/ZrEqkb7i88esd8fszBWQi7NY"}>お問い合わせ</Link>
       </div>
     </div>
   );
@@ -62,7 +62,7 @@ const DesktopHeader: FC = () => {
       <div className={"flex flex-row align-middle flex-1 justify-end"}>
         <LinkItem href={"#calendar"}>カレンダー</LinkItem>
         <LinkItem href={"#news"}>ニュース</LinkItem>
-        <LinkItem href={"#contact"}>お問い合わせ</LinkItem>
+        <Link className="grid place-items-center p-4 text-sm duration-500 hover:font-bold" href={"https://suite.starthype.co.jp/apps/forms/s/ZrEqkb7i88esd8fszBWQi7NY"}>お問い合わせ</Link>
       </div>
     </div>
   );
