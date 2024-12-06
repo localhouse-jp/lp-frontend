@@ -1,9 +1,9 @@
 
 export default function Why() {
   return (
-    <div className="w-full my-32 blue-gradient dark:text-black duration-500 hover:py-16" id="why">
+    <div className="w-full bg-gray-3" id="why">
       {/* <div className="w-full my-32 bg-gray-950 text-white duration-500 hover:py-1 hover:shadow-[inset_0px_25px_25px_rgba(0,0,0,0.5),_inset_0px_-25px_25px_rgba(0,0,0,0.5)]"> */}
-      <div className="flex flex-col lg:flex-row py-48 px-4 md:px-32 max-w-[1700px] md:mx-auto gap-12 justify-center">
+      <div className="flex flex-col lg:flex-row py-32 px-4 md:px-32 max-w-[1700px] md:mx-auto gap-12 justify-center">
         <p className="font-bold min-w-[240px] text-3xl my-auto text-center">ストーリー</p>
         <div className="flex flex-col lg:max-w-[720px] max-w-full gap-6">
           <p className="font-bold w-full lg:text-2xl text-xl">エンジニアが創造的な活動ができる場所を創りたい</p>
