@@ -2,13 +2,13 @@ import { inter } from "@/common/util/font";
 import { Footer } from "@/components/footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Header } from "@/components/header";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import Head from "next/head";
 import Script from "next/script";
 import { ReactNode } from "react";
 import "./globals.css";
-import {ThemeProvider} from "@/components/ThemeProvider";
-import "@radix-ui/themes/styles.css";
 
 export const metadata: Metadata = {
   title: "LOCALHOUSE ローカルハウス | IT系学生コミュニティ",
