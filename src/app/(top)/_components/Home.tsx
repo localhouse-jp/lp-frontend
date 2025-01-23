@@ -13,7 +13,7 @@ export default function Home() {
         <Image src={Sample02.src} alt={""} width={512} height={16} className="hidden lg:block h-screen max-h-[1280px] w-screen object-cover relative top-0 left-0 right-0" />
         <Image src={Sample02_sm.src} alt={""} width={512} height={16} className="lg:hidden h-screen max-h-[800px] w-screen object-cover relative top-0 left-0 right-0" />
       </div>
-      <div className="backdrop-blur-sm bg-[rgba(255,255,255,0.2)] px-8 lg:px-16 h-screen lg:max-h-[1280px] max-h-[800px]">
+      <div className="backdrop-blur-sm bg-[rgba(255,255,255,0.2)] dark:bg-[rgba(0,0,0,0.2)] px-8 lg:px-16 h-screen lg:max-h-[1280px] max-h-[800px]">
         <div className="max-h-[800px] mx-auto">
           <div className="absolute z-0 pt-28 overflow-hidden">
             <BackgroundText />
