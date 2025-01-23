@@ -8,7 +8,7 @@ export default function Sponsors() {
   return (
     <div className="flex flex-col gap-8 my-16" id="sponsors">
       <div className="flex">
-        <TitlePin title="Sponsors"/>
+        <TitlePin title="Sponsors" />
       </div>
       <div className={"flex flex-col gap-4"}>
         <p className="md:text-2xl text-xl font-bold">スポンサー</p>
@@ -22,7 +22,7 @@ export default function Sponsors() {
           </Link>*/}
         </div>
 
-        <hr className="h-0.5 bg-neutral-100 dark:bg-white/10"/>
+        <hr className="h-0.5 bg-neutral-100 dark:bg-white/10" />
 
         <div className="flex flex-wrap md:gap-4 gap-2 md:justify-start justify-center">
           {/*<Link href="https://hackbar.jp/" target="_blank"
@@ -34,12 +34,12 @@ export default function Sponsors() {
           </Link>*/}
 
           <Link href="https://starthype.co.jp" target="_blank"
-                className="bg-slate-50 text-black rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
+            className="bg-slate-50 text-black rounded-xl p-4 duration-500 hover:scale-[102%] hover:shadow-lg">
             <p className="text-xs">運営</p>
             <p className="font-bold text-md">STARTHYPE, Inc.</p>
-            <p className="w-36 md:w-44 mx-auto text-xs">代表取締役 廣瀬悠人<br/>近畿大学情報学部在学中</p>
-
+            <p className="w-36 md:w-44 mx-auto text-xs">代表取締役 廣瀬悠人<br />近畿大学情報学部在学中</p>
           </Link>
+
         </div>
 
       </div>
@@ -47,14 +47,14 @@ export default function Sponsors() {
         <p className="font-bold md:text-base text-sm">個人でご支援くださった皆様(敬称略・順不同)</p>
         <div className="w-32 flex flex-warp gap-4">
           <PrivateSponsor name="HIROSSY" href="" />
-        <PrivateSponsor name="ひろせファーム" href="http://hirose-f.com" />
-        <PrivateSponsor name="加藤 翔" href=""/>
+          <PrivateSponsor name="ひろせファーム" href="http://hirose-f.com" />
+          <PrivateSponsor name="加藤 翔" href="" />
         </div>
 
       </div>
       <div className="flex justify-center my-6">
         <Link href={"https://donate.stripe.com/aEU2cdayq8194RqeUU"}
-              className="transition duration-100 hover:scale-95 bg-lime-400 text-black px-32 py-4 font-bold md:w-auto w-full rounded-md grid place-items-center">
+          className="transition duration-100 hover:scale-95 bg-lime-400 text-black text-center py-4 font-bold md:w-80 w-full rounded-md grid place-items-center">
           応援できるボタン ☕
         </Link>
       </div>
@@ -62,9 +62,9 @@ export default function Sponsors() {
   );
 }
 
-function PrivateSponsor({name, href}: { name: string, href?: string }) {
+function PrivateSponsor({ name, href }: { name: string, href?: string }) {
   return href ? (
     <Link href={href} target="_blank"
-          className="bg-slate-50 text-black rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</Link>
+      className="bg-slate-50 text-black rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</Link>
   ) : <p className="bg-slate-50 text-black rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</p>;
 }
