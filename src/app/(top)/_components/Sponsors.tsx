@@ -3,6 +3,7 @@
 import TitlePin from "@/app/_components/TitlePin";
 // import Image from "next/image";
 import Link from "next/link";
+import Marquee from "react-fast-marquee";
 
 export default function Sponsors() {
   return (
@@ -45,11 +46,11 @@ export default function Sponsors() {
       </div>
       <div className={"flex flex-col gap-4"}>
         <p className="font-bold md:text-base text-sm">個人でご支援くださった皆様(敬称略・順不同)</p>
-        <div className="w-32 flex flex-warp gap-4">
+        <Marquee className="w-full h-14">
           <PrivateSponsor name="HIROSSY" href="" />
           <PrivateSponsor name="ひろせファーム" href="http://hirose-f.com" />
           <PrivateSponsor name="加藤 翔" href="" />
-        </div>
+        </Marquee>
 
       </div>
       <div className="flex justify-center my-6">
@@ -63,8 +64,8 @@ export default function Sponsors() {
 }
 
 function PrivateSponsor({ name, href }: { name: string, href?: string }) {
+  const style = "bg-slate-50 text-black rounded-xl content-center ml-2 m-0 px-4 h-14 font-bold lg:w-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg";
   return href ? (
-    <Link href={href} target="_blank"
-      className="bg-slate-50 text-black rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</Link>
-  ) : <p className="bg-slate-50 text-black rounded-xl px-8 py-4 font-bold my-auto text-nowrap duration-500 hover:opacity-80 hover:scale-[110%] hover:shadow-lg">{name}</p>;
+    <div className={style}><Link href={href} target="_blank">{name}</Link></div>
+  ) : <p className={style}>{name}</p>;
 }
