@@ -7,7 +7,7 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // output: "export",
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -17,11 +17,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
-  },
+  // experimental: {
+  //   webpackBuildWorker: true,
+  //   parallelServerBuildTraces: true,
+  //   parallelServerCompiles: true,
+  // },
 }
 
 mergeConfig(nextConfig, userConfig)
