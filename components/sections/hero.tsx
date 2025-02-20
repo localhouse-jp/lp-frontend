@@ -57,7 +57,7 @@ const HeroContent = ({ data }: HeroProps) => (
             key={index}
             className={cn(
               "block mt-2",
-              index === 2 && "bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text",
+              index === 2 && "bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text inline-block",
             )}
           >
             {line}

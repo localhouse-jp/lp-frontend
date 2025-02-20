@@ -1,17 +1,17 @@
 "use client"
 
-import { useState } from "react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { SectionContainer } from "@/components/ui/section-container"
 import { SectionHeader } from "@/components/ui/section-header"
+import { useState, useCallback } from "react"
 
 export default function PrivacyPage() {
   const [language, setLanguage] = useState<"ja" | "en">("ja")
 
-  const toggleLanguage = () => {
+  const toggleLanguage = useCallback(() => {
     setLanguage((prevLang) => (prevLang === "ja" ? "en" : "ja"))
-  }
+  }, [])
 
   const navigationItems = [{ text: language === "ja" ? "ホーム" : "Home", href: "/" }]
 
