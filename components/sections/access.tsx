@@ -28,7 +28,7 @@ export function Access({ title, location, notes }: AccessProps) {
               width="100%"
               height="450"
               className="grayscale opacity-80 hover:opacity-100 transition-opacity duration-300"
-              style={{ border: 0 }}
+              style={{ border: 0, filter: "invert(100%) hue-rotate(-180deg)" }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
