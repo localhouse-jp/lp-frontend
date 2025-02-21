@@ -1,21 +1,21 @@
 "use client"
 
-import { useState } from "react"
-import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { Hero } from "@/components/sections/hero"
-import { Features } from "@/components/sections/features"
-import { Members } from "@/components/sections/members"
-import { Gallery } from "@/components/sections/gallery"
-import { Calendar } from "@/components/sections/calendar"
-import { Sponsors } from "@/components/sections/sponsors"
-import { Pricing } from "@/components/sections/pricing"
+import { Header } from "@/components/layout/header"
 import { Access } from "@/components/sections/access"
-import { FAQ } from "@/components/sections/faq"
-import { CTA } from "@/components/sections/cta"
-import { NewsSection } from "@/components/sections/news-section"
 import { BlogSection } from "@/components/sections/blog-section"
-import { motion, AnimatePresence } from "framer-motion"
+import { Calendar } from "@/components/sections/calendar"
+import { CTA } from "@/components/sections/cta"
+import { FAQ } from "@/components/sections/faq"
+import { Features } from "@/components/sections/features"
+import { Gallery } from "@/components/sections/gallery"
+import { Hero } from "@/components/sections/hero"
+import { Members } from "@/components/sections/members"
+import { NewsSection } from "@/components/sections/news-section"
+import { Pricing } from "@/components/sections/pricing"
+import { Sponsors } from "@/components/sections/sponsors"
+import { AnimatePresence, motion } from "framer-motion"
+import { useState } from "react"
 
 export default function Page() {
   const [language, setLanguage] = useState<"ja" | "en">("ja")
@@ -193,7 +193,7 @@ export default function Page() {
     },
     goldSponsors: [{ logoAlt: language === "ja" ? "タスキホールディングス" : "TASUKI Holdings Inc." }],
     individualSupporters: [
-      { name: "HIROSSY" },
+      { name: "HIROSSY", link: "https://x.com/hirossy" },
       { name: "ひろせファーム", link: "http://hirose-f.com/" },
       { name: language === "ja" ? "加藤 翔" : "Sho Kato" },
     ],
@@ -212,11 +212,11 @@ export default function Page() {
         language === "ja"
           ? ["24時間365日利用可能", "全設備・機材の利用", "コミュニティイベント参加", "メンタリングサービス"]
           : [
-              "Access 24/7",
-              "Full access to equipment and facilities",
-              "Participation in community events",
-              "Mentoring services",
-            ],
+            "Access 24/7",
+            "Full access to equipment and facilities",
+            "Participation in community events",
+            "Mentoring services",
+          ],
       button: language === "ja" ? "参加申し込み" : "Join Now",
     },
     notes:
@@ -242,9 +242,9 @@ export default function Page() {
       language === "ja"
         ? ["駐輪場は場合により2台まで対応可能", "駐車場はありません。公共交通機関をご利用ください。"]
         : [
-            "Limited bicycle parking available (up to 2 bikes, depending on circumstances)",
-            "No car parking available. Please use public transportation.",
-          ],
+          "Limited bicycle parking available (up to 2 bikes, depending on circumstances)",
+          "No car parking available. Please use public transportation.",
+        ],
   }
 
   const faqData = {
