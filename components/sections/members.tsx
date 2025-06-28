@@ -32,7 +32,6 @@ const memberImages: Record<string, string> = {
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%BB%A3%E7%80%AC%E6%82%A0%E4%BA%BA-VAVjw5PR5W2uW9USAb7sYLffBxOB6z.jpeg",
   シュレスタアロク:
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B7%E3%83%A5%E3%83%AC%E3%82%B9%E3%82%BF%E3%82%A2%E3%83%AD%E3%82%AF.jpg-ObImTeiEXcVRvnd9w3xpZsldPXINn4.jpeg",
-    tenhou: "/tenhou.jpeg",
 }
 
 const MemberCard = ({ member }: { member: Member }) => (
