@@ -108,25 +108,25 @@ export default function Page() {
       {
         name: "廣瀬悠人",
         role: language === "ja" ? "代表" : "CEO",
-        affiliation: language === "ja" ? "近畿大学情報学部B1" : "Kindai University, School of Information, Year 1",
+        affiliation: language === "ja" ? "近畿大学情報学部B2" : "Kindai University, School of Information, Year 2",
         image: "/placeholder.svg",
       },
       {
         name: "xpadev",
         role: language === "ja" ? "メンバー" : "Member",
-        affiliation: language === "ja" ? "近畿大学情報学部B1" : "Kindai University, School of Information, Year 1",
+        affiliation: language === "ja" ? "近畿大学情報学部B2" : "Kindai University, School of Information, Year 2",
         image: "/placeholder.svg",
       },
       {
         name: "シュレスタアロク",
         role: language === "ja" ? "メンバー" : "Member",
-        affiliation: language === "ja" ? "大阪工業大学M2" : "Osaka Institute of Technology, M2",
+        affiliation: language === "ja" ? "大阪工業大学D1" : "Osaka Institute of Technology, D1",
         image: "/placeholder.svg",
       },
       {
         name: "Nova",
         role: language === "ja" ? "メンバー" : "Member",
-        affiliation: language === "ja" ? "近畿大学情報学部B1" : "Kindai University, School of Information, Year 1",
+        affiliation: language === "ja" ? "近畿大学情報学部B2" : "Kindai University, School of Information, Year 2",
         image: "/placeholder.svg",
       },
       {
