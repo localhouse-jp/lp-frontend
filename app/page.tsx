@@ -120,7 +120,7 @@ export default function Page() {
       {
         name: "シュレスタアロク",
         role: language === "ja" ? "メンバー" : "Member",
-        affiliation: language === "ja" ? "大阪工業大学D1" : "Osaka Institute of Technology, M2",
+        affiliation: language === "ja" ? "大阪工業大学D1" : "Osaka Institute of Technology, D1",
         image: "/placeholder.svg",
       },
       {
