@@ -135,6 +135,12 @@ export default function Page() {
         affiliation: language === "ja" ? "近畿大学情報学部B2" : "Kindai University, School of Information, Year 2",
         image: "/placeholder.svg",
       },
+      {
+        name: "tenhou",
+        role: language === "ja" ? "メンバー" : "Member",
+        affiliation: language === "ja" ? "近畿大学情報学部B2" : "Kindai University, School of Information, Year 2",
+        image: "/placeholder.svg",
+      },
     ],
     testimonials: [
       {
