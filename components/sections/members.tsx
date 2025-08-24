@@ -70,10 +70,16 @@ export function Members({ title, members, testimonials, language }: MembersProps
       <Container>
         <SectionHeader title={title} />
 
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 mb-16">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 mb-4">
           {members.map((member, index) => (
             <MemberCard key={index} member={member} />
           ))}
+        </div>
+        
+        <div className="text-center mb-16">
+          <p className="text-zinc-400 text-sm">
+            {language === "ja" ? "その他計53人" : "Plus 53 other members"}
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
