@@ -56,8 +56,8 @@ export default function Page() {
       title: language === "ja" ? "充実の開発環境" : "Advanced Development Environment",
       description:
         language === "ja"
-          ? "デュアルディスプレイ完備の開発環境。MacBook Pro, 4Kモニターを利用可能"
-          : "Equipped with dual displays, MacBook Pros, and 4K monitors for optimal coding.",
+          ? "デュアルディスプレイ完備の開発環境。ゲーミングPC, 4Kモニターを利用可能"
+          : "Equipped with dual displays, gaming PCs, and 4K monitors for optimal coding.",
       icon: "Code",
     },
     {
@@ -69,11 +69,11 @@ export default function Page() {
       icon: "Cpu",
     },
     {
-      title: language === "ja" ? "高速ネットワーク" : "High-speed Network",
+      title: language === "ja" ? "自由に使えるサーバー" : "Free-to-use Server",
       description:
         language === "ja"
-          ? "10Gbps高速ネットワーク。VPN接続、クラウド開発環境も整備"
-          : "10Gbps high-speed network with VPN and cloud development environments.",
+          ? "サーバーを勉強したいけどクラウド料金が払えない学生でも無制限に遊べるサーバーをご用意しています"
+          : "We provide unlimited server access for students who want to learn about servers but can't afford cloud fees.",
       icon: "Network",
     },
     {
@@ -284,7 +284,7 @@ export default function Page() {
           language === "ja" ? "一般の方や短期利用は可能ですか？" : "Is short-term use available for non-students?",
         answer:
           language === "ja"
-            ? "申し訳ありませんが、一般の方や短期利用はご遠慮いただいております。"
+            ? "申し訳ありませんが、一般の方の利用はご遠慮いただいておりますが、短期利用やハッカソンなどのイベントでのご利用は歓迎しております。"
             : "Unfortunately, short-term or non-student usage is not available.",
       },
     ],
