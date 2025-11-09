@@ -1,8 +1,11 @@
+"use client"
+
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Container } from "@/components/ui/container"
 import { SectionHeader } from "@/components/ui/section-header"
 import { Section } from "@/components/ui/section"
+import { useActiveAvatars } from "@/hooks/use-active-avatars"
 
 interface Member {
   name: string
@@ -65,6 +68,8 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
 )
 
 export function Members({ title, members, testimonials, language }: MembersProps) {
+  const { avatars, loading, error } = useActiveAvatars()
+
   return (
     <Section id="members" className="py-24 bg-black">
       <Container>
@@ -76,10 +81,41 @@ export function Members({ title, members, testimonials, language }: MembersProps
           ))}
         </div>
         
-        <div className="text-center mb-16">
-          <p className="text-zinc-400 text-sm">
+        <div className="text-center mb-8">
+          <p className="text-zinc-400 text-sm mb-6">
             {language === "ja" ? "その他計53人" : "Plus 53 other members"}
           </p>
+          
+          {/* Active Avatars Section */}
+          {loading && (
+            <p className="text-zinc-500 text-xs">
+              {language === "ja" ? "読み込み中..." : "Loading..."}
+            </p>
+          )}
+          
+          {error && (
+            <p className="text-zinc-500 text-xs">
+              {language === "ja" ? "アバターの読み込みに失敗しました" : "Failed to load avatars"}
+            </p>
+          )}
+          
+          {!loading && !error && avatars.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+              {avatars.map((avatar, index) => (
+                <div
+                  key={index}
+                  className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-zinc-800 hover:border-purple-500 transition-colors duration-200"
+                >
+                  <Image
+                    src={`https://kitade.localhouse.jp${avatar}`}
+                    alt={`Active member ${index + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="max-w-4xl mx-auto">
