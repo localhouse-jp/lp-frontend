@@ -13,6 +13,7 @@ import { Hero } from "@/components/sections/hero"
 import { Members } from "@/components/sections/members"
 import { NewsSection } from "@/components/sections/news-section"
 import { Pricing } from "@/components/sections/pricing"
+import { ProjectsSection } from "@/components/sections/projects-section"
 import { Sponsors } from "@/components/sections/sponsors"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
@@ -29,6 +30,7 @@ export default function Page() {
     { text: language === "ja" ? "特徴" : "Features", href: "#features" },
     { text: language === "ja" ? "メンバー" : "Members", href: "#members" },
     { text: language === "ja" ? "ギャラリー" : "Gallery", href: "#gallery" },
+    { text: language === "ja" ? "プロジェクト" : "Projects", href: "#projects" },
     { text: language === "ja" ? "スポンサー" : "Sponsors", href: "#sponsors" },
     { text: language === "ja" ? "料金" : "Pricing", href: "#pricing" },
     { text: language === "ja" ? "アクセス" : "Access", href: "#access" },
@@ -354,6 +356,7 @@ export default function Page() {
             language={language}
           />
           <Gallery title="ギャラリー" images={galleryImages} />
+          <ProjectsSection />
           <NewsSection />
           <BlogSection />
           <Sponsors
